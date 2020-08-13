@@ -6,15 +6,20 @@ public class CarSingleton {
 
     private static CarSingleton carSingleton;
 
-    private static CarSingleton createCar(){
+    private String msg;
+
+    public static CarSingleton createCar(){
         if (carSingleton ==  null)
             carSingleton = new CarSingleton();
 
         return carSingleton;
     }
 
-    public static void detais(){
-        System.out.println("This is a singleton class!!!");
+    public String getMsg() {
+        return msg;
     }
 
+    public void setMsg(String msg) {
+        this.msg = msg;
+    }
 }
